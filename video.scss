@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body{
-  background-image: url('vid/spider.jpg');
+  // background-image: url('vid/spider.jpg');
+  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,4 +28,29 @@ body{
     border-radius: 0.5rem;
     cursor: pointer;
   }
+ 
 }
+.but:hover{
+  background-color: rgb(4, 48, 48);
+}
+table{
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  th{
+    color: rgb(92, 92, 194);
+    font-size: 1.6rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2rem;
+  }
+  td{
+    color: #fff;
+  }
+}
+// tr,th,td{
+//   border: 1px solid rgb(83, 83, 175);
+//   border-collapse: collapse;
+//   // border-bottom: none;
+// }
