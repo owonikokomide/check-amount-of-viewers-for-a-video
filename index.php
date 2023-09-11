@@ -10,7 +10,7 @@
   <div class="container">
     <h1>Upload a video</h1>
     <form action="" method="POST" enctype="multipart/form-data">
-      <input type="file" name="video" accept="video/">
+      <input type="file" name="video" required accept="video/">
       <input type="submit" name="submit">
     </form>
   </div>
@@ -19,24 +19,33 @@
 
 <?php
 
+
 if(isset($_POST['submit'])){
   $video = $_FILES['video']['name'];
   $folder = "folder/";
   $destination = $video.$folder;
   $tmp = $_FILES['video']['tmp_name'];
+
 $n = move_uploaded_file($tmp, $destination);
 
-$update = mysqli_query($connection,"UPDATE link SET video_name ='$video' WHERE id ='1'");
-
-  if($update){
-   echo "<script> alert('Video Successfully Uploaded')
-   location.href='video.php'
-   </script>";
-   
-  }
-  else{
-    echo "error uploading video";
-  }
+  $select = "SELECT * FROM link";
+// $select_query = mysqli_query($connection, $select);
+$checkexist = mysqli_query($connection,"SELECT * FROM link where video_name='$video'");
+// 
+if(mysqli_num_rows($checkexist)==1){
+echo "Video already exist";
+}else{
+  $add_supp = mysqli_query($connection,"INSERT INTO link (video_name,views)
+  VALUES('$video','0')");
+  if($add_supp){
+    echo "<script> alert('Video Successfully Added')
+    location.href='video.php'
+    </script>";
+    
+   }else{
+    echo "error inserting";
+   }
 }
 
+}
 ?>
