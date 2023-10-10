@@ -17,8 +17,7 @@
 </body>
 </html>
 
-<?php
-
+<?php 
 
 if(isset($_POST['submit'])){
   $video = $_FILES['video']['name'];
