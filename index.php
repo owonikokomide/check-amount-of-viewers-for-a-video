@@ -40,7 +40,6 @@ echo "Video already exist";
     echo "<script> alert('Video Successfully Added')
     location.href='video.php'
     </script>";
-    
    }else{
     echo "error inserting";
    }
