@@ -1,6 +1,6 @@
 <?php include('config.php'); ?>
 <?php
-if(isset($_POST['play'])){
+if(isset($_POST['play'])){ 
     $id = $_POST['hide'];
     $select = "SELECT * FROM link  WHERE id ='$id'";
     $select_query = mysqli_query($connection, $select); 
