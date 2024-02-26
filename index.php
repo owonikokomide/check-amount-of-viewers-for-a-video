@@ -14,7 +14,7 @@
       <input type="submit"  name="submit">
     </form>
   </div>
-</body>
+</body> 
 </html>
  
 <?php 
