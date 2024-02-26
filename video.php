@@ -12,7 +12,7 @@ if($update){
 }
 }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <link rel="stylesheet" href="video.css">
