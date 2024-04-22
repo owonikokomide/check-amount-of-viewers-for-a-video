@@ -7,7 +7,7 @@ if(isset($_POST['play'])){
     $row = mysqli_fetch_array($select_query);
     $r = $row['views']+1;
 $update = mysqli_query($connection,"UPDATE link SET views ='$r' WHERE id ='$id'");
-if($update){ 
+if($update){  
 //  echo "succesful";
 }
 }
